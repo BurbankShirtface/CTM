@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #001858;
+}
+
+body {
+  background-color: #fff2d3;
+  height: 100vh;
+  min-height: 560px;
+  max-height: 100vh;
+  position: relative;
+}
+
+.title-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  text-align: center;
+}
+
+img {
+  height: 30px;
+  margin: auto 20px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #172c66;
+}
+
+.container {
+  width: 90%;
+  height: 65%;
+  max-width: 1000px;
+  min-height: 400px;
+  max-height: 800px;
+  border: solid 1px #172c66;
+  border-radius: 5px;
+  background-color: #f1d8cc;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.play-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 15%;
+}
+
+button {
+  /* margin: 20px auto; */
+  height: 50%;
+  width: 25%;
+  background-color: #8bd3dd;
+  color: #001858;
+  border: solid 1px #001858;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: 600;
+  max-width: 300px;
+}
+
+button:hover {
+  box-shadow: 1px 1px 5px gray;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+.rules-container {
+  height: 80%;
+  width: 80%;
+  text-align: center;
+  color: #001858;
+  font-size: 1.3em;
+  font-weight: 600;
+  word-spacing: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rules-para {
+  height: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-box {
+  position: absolute;
+  background-color: #f1d8cc;
+}
+
+.dead-center {
+  height: 4px;
+  width: 4px;
+  background-color: red;
+  position: absolute;
+  display: none;
+}
+
+.result,
+.gameOverDisplay {
+  width: 30%;
+  line-height: 150%;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+  background-color: #8bd3dd;
+  color: #001858;
+  font-weight: 600;
+  display: none;
+  z-index: 5;
+  border: solid 2px #001858;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgb(121, 121, 121);
+  position: absolute;
+}
+.gameOverDisplay {
+  padding: 20px;
+  font-size: 2em;
+}
+.result {
+  bottom: 25px;
+}
+
+.play-again {
+  display: none;
+  font-size: 25px;
+}
+
+.next-box {
+  display: none;
+  font-size: 25px;
+}
+
+.user-crosshairs {
+  display: none;
+  height: 20px;
+  width: 20px;
+  margin: 0;
+  position: absolute;
+}
+
+/***************************************************************/
+/* GAME INFO */
+
+.game-info {
+  height: 10%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.current-score {
+  width: 33%;
+  font-size: 30px;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.highScoreContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 33%;
+  height: 100%;
+}
+
+.resetHighScoreButton {
+  font-size: 10px;
+  width: 60px;
+  height: 20px;
+  margin: 10px;
+}
+
+.timer-container {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.box-count {
+  width: 33%;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/********************************************************************/
+
+@media (max-width: 460px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .title-banner {
+    height: 12%;
+  }
+
+  .play-btn-container {
+    height: 13%;
+    position: absolute;
+    bottom: 0;
+  }
+  button {
+    height: 80%;
+    width: 60%;
+  }
+  .play-again {
+    font-size: 20px;
+    margin: 0 auto;
+  }
+  .rules-para {
+    height: 100%;
+    font-size: 18px;
+  }
+  .play {
+    margin: 0 auto;
+  }
+  .container {
+    max-width: 460px;
+    min-height: 200px;
+    width: 100%;
+    height: 75%;
+  }
+  body {
+    padding: 4px;
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click The Middle</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="title-banner">
+      <figure><img src="assets\crosshairs.png" /></figure>
+      <h1>Click The Middle</h1>
+      <figure><img src="assets\crosshairs.png" /></figure>
+    </div>
+    <div class="game-info">
+      <div class="current-score">Score: 0</div>
+      <div class="highScoreContainer">
+        <h3 class="highScore">HighScore: N/A</h3>
+        <button class="resetHighScoreButton">Reset</button>
+      </div>
+      <div class="timer-container">
+        <div class="box-count">Box: 00</div>
+        <div class="timer">00:00</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="game-box">
+        <div class="dead-center"></div>
+        <img class="user-crosshairs" src="assets\crosshairs.png" />
+      </div>
+      <div class="rules-container">
+        <p class="rules-para">
+          You have 10 seconds to click as close to the middle of 5 boxes as you
+          can... <br /><br /><br />
+          Press PLAY or SPACEBAR to start<br /><br /><br />
+          Good Luck!
+        </p>
+      </div>
+      <div class="result"></div>
+      <div class="gameOverDisplay"></div>
+    </div>
+    <div class="play-btn-container">
+      <button class="play">Play</button>
+      <button class="play-again">Play Again</button>
+      <button class="next-box">Next Box</button>
+    </div>
+    <script src="https://unpkg.com/canvas-confetti@1.5.1/dist/confetti.browser.js"></script>
+    <script src="app1.js"></script>
+  </body>
+</html>
