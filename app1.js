@@ -69,19 +69,20 @@ window.addEventListener("resize", function () {
   return gameMaxHeight, gameMaxWidth;
 });
 
-/** RANDOM/INIT RESETS  *********************************/
+/** RANDOM/INITIAL RESETS  *********************************/
 
-// html 'rules' change on mobile
-if (gameMaxWidth < 500) {
-  rulesPara.innerHTML =
-    '1. Click the "Play" button and a box will appear.<br><br><br>2. Click as close to the middle of the box as you can.<br><br><br>3. You will get a score that indicates how many pixels away from the middle you clicked.<br><br><br>4. Lowest score wins.<br><br><br>That\'s it!';
-}
 // grab localStorage on init
 highScore = localStorage.getItem("highScore");
 if (highScore == null || highScore == "undefined") {
   highScoreDisplay.innerHTML = "HighScore: N/A";
 } else {
   highScoreDisplay.innerHTML = `HighScore: ${highScore}`;
+}
+
+// setting different rule display for mobile devices
+if (gameMaxWidth < 500) {
+  rulesPara.innerHTML =
+    "You have 10 seconds to click as close to the middle of 5 boxes as you can...<br/><br/>Press PLAY to start<br/><br/>Good Luck!";
 }
 
 /** FUNCTIONS  *******************************************/
